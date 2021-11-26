@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    tools:context=".dashboard"
+    android:background="@drawable/com"
+    android:fitsSystemWindows="true"
+    >
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header"
+        app:menu="@menu/main_menu"
+        >
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+    <RelativeLayout
+        android:id="@+id/relative"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="39dp"
+            android:layout_marginLeft="39dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="42dp"
+            android:layout_marginRight="42dp"
+            android:text="Find Your Job!"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"             />
+
+        <EditText
+            android:id="@+id/searchjob"
+            android:layout_width="290dp"
+            android:layout_height="40dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="94dp"
+            android:layout_marginRight="94dp"
+            android:background="@drawable/searchdashboard"
+            android:ems="10"
+            android:hint="Search Job..."
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchjob"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"
+            android:text="Popular Search"
+            android:textColor="#2486E0"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchjob" />
+
+        <HorizontalScrollView
+            android:id="@+id/scrolsamping"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/searchjob"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="85dp"
+            android:scrollbars="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="2dp"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="29dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Web Design"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Digital Marketer"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Content Creator"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Front End"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="2dp"
+                    app:cardCornerRadius="10dp">
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="34dp"
+                        android:layout_marginTop="4dp"
+                        android:text="Back End"
+                        android:textColor="@color/black"
+                        android:textSize="12sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="206dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView8"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="189dp"
+            android:layout_marginRight="189dp"
+            android:text="New Job"
+            android:textColor="#2486E0"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scrolsamping" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="266dp"
+            android:layout_marginLeft="266dp"
+            android:layout_marginTop="294dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:paddingLeft="70dp"
+            android:text="See all"
+            android:textColor="@color/black" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:layout_marginTop="330dp"
+            android:layout_marginBottom="4dp"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="115dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="0dp"
+                    android:layout_marginRight="0dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/ace"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/ace" />
+
+                    <LinearLayout
+                        android:layout_width="339dp"
+                        android:layout_height="95dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView21"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:layout_marginTop="16dp"
+                            android:text="Store Supervisor"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/textView23"
+                            android:layout_width="309dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:layout_marginTop="5dp"
+                            android:text="PT. Ace Hardware Indonesia Tbk"
+                            android:textColor="#0085FF" />
+
+                        <ImageView
+                            android:id="@+id/imageView8"
+                            android:layout_width="29dp"
+                            android:layout_height="22dp"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="5dp"
+                            app:srcCompat="@drawable/map" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/pwktin"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-290dp"
+                        android:layout_marginTop="69dp"
+                        android:text="Purwokerto, Indonesia"
+                        android:textSize="11sp" />
+
+                    <ImageView
+                        android:id="@+id/file3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-85dp"
+                        android:layout_marginTop="65dp"
+                        android:src="@drawable/file" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-1dp"
+                        android:layout_marginTop="69dp"
+                        android:text="Work From Home"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:layout_width="301dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="-368dp"
+                        android:layout_marginTop="95dp"
+                        android:text="Update 3 menit yang lalu"
+                        android:textSize="11sp" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="409dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="117dp"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/updatetel"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="352dp"
+                    android:layout_marginRight="352dp"
+                    android:layout_marginBottom="35dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="9dp"
+                        android:src="@drawable/telkom" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/caradtengah"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="61dp"
+                    android:layout_marginLeft="61dp"
+                    android:layout_marginTop="120dp"
+                    android:layout_marginEnd="101dp"
+                    android:layout_marginRight="101dp"
+                    android:layout_marginBottom="28dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/CC"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:text="Content Creator"
+                        android:textColor="@color/black"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/telkom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="21dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="1"
+                        android:text="Telkom Indonesia"
+                        android:textColor="#0085FF" />
+
+                    <ImageView
+                        android:id="@+id/map"
+                        android:layout_width="29dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="18dp"
+                        android:layout_marginTop="5dp"
+                        app:srcCompat="@drawable/map" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/pwtin"
+                    android:layout_width="269dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="187dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginRight="32dp"
+                    android:text="Purwokerto, Indonesia"
+                    android:textSize="11sp" />
+
+                <TextView
+                    android:id="@+id/updatetel"
+                    android:layout_width="307dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/file"
+                    android:layout_alignBottom="@+id/caradtengah"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginTop="28dp"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginRight="19dp"
+                    android:layout_marginBottom="13dp"
+                    android:text="Update  6 menit yang lalu"
+                    android:textSize="11sp" />
+
+                <ImageView
+                    android:id="@+id/file"
+                    android:layout_width="35dp"
+                    android:layout_height="24dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="230dp"
+                    android:layout_marginTop="184dp"
+                    android:layout_marginBottom="-1dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/file" />
+
+                <TextView
+                    android:id="@+id/wfh"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/updatetel"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="267dp"
+                    android:layout_marginLeft="265dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="25dp"
+                    android:text="WFH / Remote"
+                    android:textSize="11sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/caradtengah"
+                    android:layout_width="409dp"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="237dp" />
+
+                <LinearLayout
+                    android:id="@+id/bawah"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/caradtengah"
+                    android:layout_alignBottom="@+id/terakhir"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginLeft="42dp"
+                    android:layout_marginTop="13dp"
+                    android:layout_marginEnd="22dp"
+                    android:layout_marginRight="22dp"
+                    android:layout_marginBottom="6dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="-9dp"
+                        android:src="@drawable/bri" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/marketing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:layout_marginTop="6dp"
+                            android:text="Marketing"
+                            android:textColor="@color/black"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:id="@+id/bri"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="21dp"
+                            android:layout_marginTop="3dp"
+                            android:text="Bank BRI"
+                            android:textColor="#0085FF" />
+
+                        <ImageView
+                            android:id="@+id/map2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginTop="7dp"
+                            android:src="@drawable/map" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-25dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/pwin"
+                                android:layout_width="126dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="48dp"
+                                android:layout_marginTop="4dp"
+                                android:text="Purwokerto, Indonesia"
+                                android:textSize="11sp" />
+
+                            <ImageView
+                                android:id="@+id/file2"
+                                android:layout_width="35dp"
+                                android:layout_height="24dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/file" />
+
+                            <TextView
+                                android:id="@+id/wfo"
+                                android:layout_width="128dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Work From Office"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/menit"
+                            android:layout_width="317dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="19dp"
+                            android:layout_marginTop="5dp"
+                            android:text="Update 10 menit yang lalu"
+                            android:textSize="11sp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/terakhir"
+                    android:layout_width="409dp"
+                    android:layout_height="2dp"
+                    android:layout_below="@+id/caradtengah"
+                    android:layout_marginTop="110dp"
+                    android:layout_marginBottom="5dp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="370dp">
+
+                    <TextView
+                        android:id="@+id/rekomen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="11dp"
+                        android:text="Recomended Company"
+                        android:textColor="#0085FF"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="137dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="140dp"
+                        android:layout_marginTop="1dp"
+                        android:text="See all"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="93dp"
+                    android:layout_marginTop="400dp"
+                    android:layout_marginBottom="5dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="100dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:orientation="horizontal">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="190dp"
+                            android:layout_height="62dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="7dp"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/kai" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="89dp"
+                                android:layout_marginTop="6dp"
+                                android:text="PT. KAI"
+                                android:textColor="#0085FF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="89dp"
+                                android:layout_marginTop="30dp"
+                                android:text="4 Jobs"
+                                android:textSize="13sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="250dp"
+                            android:layout_height="62dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="17dp"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="14dp"
+                                android:layout_marginTop="5dp"
+                                android:src="@drawable/matahari" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="89dp"
+                                android:layout_marginTop="6dp"
+                                android:text="Matahari Departmen"
+                                android:textColor="#0085FF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="89dp"
+                                android:layout_marginTop="30dp"
+                                android:text="6 Jobs"
+                                android:textSize="13sp" />
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="250dp"
+                            android:layout_height="62dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginRight="17dp"
+                            app:cardCornerRadius="10dp">
+
+                            <ImageView
+                                android:layout_width="57dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/bumn" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="89dp"
+                                android:layout_marginTop="6dp"
+                                android:text="BUMN Purwokerto"
+                                android:textColor="#0085FF"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="89dp"
+                                android:layout_marginTop="30dp"
+                                android:text="2 Jobs"
+                                android:textSize="13sp" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+            </RelativeLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pengenalan1">
+    tools:context=".pengenalan3">
 
     <TextView
         android:id="@+id/textView"
@@ -24,7 +24,7 @@
         android:id="@+id/imgtime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/halaman1_1"
+        android:src="@drawable/halaman3_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -35,7 +35,7 @@
         android:id="@+id/ket2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dalam mencari sebuah pekerjaan"
+        android:text="Yang malas mencari pekerjaan"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -48,7 +48,7 @@
         android:id="@+id/ket1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Menghemat waktu kalian"
+        android:text="Solusi terbaik untuk anda"
         android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +59,7 @@
         app:layout_constraintVertical_bias="0.612" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button3"
         android:layout_width="111dp"
         android:layout_height="44dp"
         android:text="Next"
@@ -70,6 +70,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ket2"
         app:layout_constraintVertical_bias="0.606" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

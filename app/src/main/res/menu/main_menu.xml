@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Dashboard"
+            android:icon="@drawable/dashboard"/>
+        <item
+            android:id="@+id/nav_chat"
+            android:title="Chat"
+            android:icon="@drawable/chat"/>
+        <item
+            android:id="@+id/nav_teams"
+            android:title="Teams"
+            android:icon="@drawable/person"/>
+        <item
+            android:id="@+id/nav_setting"
+            android:title="Settings"
+            android:icon="@drawable/settings"/>
+        <item
+            android:id="@+id/nav_policy"
+            android:title="Policies"
+            android:icon="@drawable/policy"/>
+    </group>
+
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Profile">
+            <menu>
+                <item
+                    android:id="@+id/nav_login"
+                    android:title="Login"
+                    android:icon="@drawable/login"/>
+
+            </menu>
+
+        </item>
+    </group>
+    <item android:title="Communicate">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="Share"
+                    android:icon="@drawable/share"/>
+            </group>
+
+        </menu>
+    </item>
+</menu>
